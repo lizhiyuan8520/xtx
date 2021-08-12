@@ -38,58 +38,185 @@
     background: url(../images/sprites.png) no-repeat -158px -69px;
 }
 .nav {
-    height: 120px;
+    height: 130px;
 }
 .logobox {
     float: left;
-    width: 240px;
-    height: 120px;
+    width: 207px;
+    height: 70px;
+    margin-top: 30px;
 }
-.logobox img {
-   
-    width: 100%;
-    height: 100%;
+.logobox a {
+    display: block;
+    width: 207px;
+    height: 70px;
+    /* 隐藏文字 */
+    font-size: 0px;
+    background: url(../images/logo.png) no-repeat;
+    background-size: 207px 70px;
 }
+
 .middle-nav {
     float: left;
-    width: 700px;
-    height: 120px;
-    line-height: 120px;
+    height: 130px;
+    margin-left: 40px;
 }
 .middle-nav ul {
-    width: 500px;
-    height: 120px;
-    margin: 0 auto;
+    margin-top: 56px;
 }
 .middle-nav li {
     float: left;
-    margin: 0 5px;
+    margin-right:48px ;
     font-size: 20px;
     font-weight: 800;
     color: #dcdcdc;
 }
 .middle-nav li a {
+    display: block;
+    padding-bottom: 6px;
     transition: all .2s;
 }
 .middle-nav li:hover a {
-    border-bottom: 2px solid #5eb69c;
+    border-bottom: 1px solid #5eb69c;
     color: #5eb69c;
 }
 .search-buy {
     float: left;
-    width: 300px;
-    height: 120px;
-    line-height: 120px;
+    position: relative;
+    width: 172px;
+    height: 30px;
+    margin-top: 56px;
 }
 .search-buy input {
-    width: 150px;
-    height: 30px;
+    width: 100%;
+    height: 100%;
     border-radius: 25px;
     border: 1px solid #dcdcdc;
     font-size: 10px;
-    padding-left: 20px;
+    padding-left: 30px;
+    
     
 }
 .search-buy input:hover {
     border: 1px solid #5eb69c;
 }
+.search-buy::before {
+    display: inline-block;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    /* background-color: #000; */
+    margin-top: -13px;
+    background: url(../images/sprites.png) no-repeat -79px -67px;
+}
+.shopping-car {
+    float: left;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-top: 56px;
+    margin-left: 3px;
+    background: url(../images/sprites.png) no-repeat -117px -68px;
+}
+.shopping-car a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.goodsnum {
+    position: absolute;
+    left: 15px;
+    top: -5px;
+    padding: 0 6px;
+    /* 购物数量的盒子，不能给宽度，又数字大小撑开，不然就限定为个位了 */
+    /* width: 20px; */
+    color: #fff;
+    font-size: 10px;
+    background-color: orange;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+
+/* 页面底部部分 */
+.concat {
+    height: 300px;
+}
+.concat .container {
+    height: 300px;
+    padding-top: 75px;
+    background: pink;
+}
+.concat .container dl {
+    float: left;
+    width: 310px;
+    padding: 0 55px;
+   
+}
+.concat dl dt {
+    color: #999;
+    text-align: center;
+}
+.concat dl dd{
+    float: left;
+    width: 92px;
+    height: 92px;
+    border: 1px solid #eee;
+    margin-top: 35px;
+    padding-top: 30px;
+    text-align: center ;
+    color: #999;
+}
+.concat dl dd:nth-child(2) {
+    margin-right: 5px;
+    
+}
+.wys {
+   
+}
+
+.kefu::before {
+    content: "" ;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 5px;
+    background: url(../images/sprites.png) no-repeat -250px -70px; 
+}
+.question::before {
+    content: "" ;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 5px;
+    background: url(../images/sprites.png) no-repeat -351px -70px; 
+}
+.gzh::before {
+    content: "" ;
+    display: block;
+    width: 37px;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 5px;
+    background: url(../images/sprites.png) no-repeat -203px -14px; 
+}
+.wb::before {
+    content: "" ;
+    display: block;
+    width: 37px;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 5px;
+    background: url(../images/sprites.png) no-repeat -349px -14px; 
+}
+
+
+
+
+
