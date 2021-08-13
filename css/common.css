@@ -149,7 +149,7 @@
 .concat .container {
     height: 300px;
     padding-top: 75px;
-    background: pink;
+    /* background: pink; */
 }
 .concat .container dl {
     float: left;
@@ -175,9 +175,7 @@
     margin-right: 5px;
     
 }
-.wys {
-   
-}
+
 
 .kefu::before {
     content: "" ;
@@ -215,7 +213,122 @@
     margin-bottom: 5px;
     background: url(../images/sprites.png) no-repeat -349px -14px; 
 }
+.download dl{
+    border-right: 1px solid #999;
+}
+.download .ewm {
+    width: 102px;
+    height: 102px;
+    margin-top: 26px;
+    padding-top: 0;
+    background-color: red;
+}
+.download .ewm img {
+   
+    width: 102px;
+    height: 102px;
+}
+.download .download-page {
+    width: 90px;
+    height: 102px;
+    margin-top: 26px;
+    padding-top: 10px;
+    font-size: 15px;
+    border: none;
+}
+.download .download-page a {
+    display: block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px auto;
+    background: #5eb69c;
+    color: #fff;
+}
+.download dl h1 {
+    font-size: 20px;
+    margin-top: 45px;
+    text-align: center;
+}
+.download p {
+    color: #999;
+    text-align: center;
+}
+.bottom {
+    height: 360px;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+    color: #fff;
+}
+.bottom .container{
+    height: 360px;
+    
+}
+.bottom-top {
 
+    height: 180px;
+}
+.bottom .bottom-top ul li {
+    float: left;
+    width: 400px;
+    height: 180px;
+    margin-left: 10px;
+    line-height: 180px;
+    font-size: 30px;
+    font-weight: 800;
+    /* background: pink; */
+    
+}
+
+
+.bottom .bottom-top li::before {
+    display: inline-block;
+    content: "";
+    vertical-align: middle;
+    width: 57px;
+    height: 59px;
+    margin-right: 5px;
+    background: url(../images/sprites.png) no-repeat;
+}
+.bottom .bottom-top li:nth-child(1) {
+     background-position: 0 0;
+}
+.bottom .bottom-top li:nth-child(2) {
+   background-position: -129px 0;
+}
+.bottom .bottom-top li:nth-child(3) {
+   background-position: -64px 0;
+}
+.copyright {
+    height: 180px;
+    border-top: 1px solid #999;
+    /* background: blue; */
+    font-size: 12px;
+    color: #999;
+}
+.copyright ul {
+    padding: 50px 55px 20px;
+}
+.copyright ul li{
+    float: left;
+    width: 70px;
+    height: 15px;
+    line-height: 15px;
+    border-right: 1px solid #999;
+    
+}
+.copyright ul li:last-child {
+    border: none;
+}
+.copyright a {
+    color: #fff;
+}
+.copyright a:hover {
+    color: #5eb69c;
+}
+.copyright ul li:first-child {
+    margin-left: 340px;
+}
 
 
 
