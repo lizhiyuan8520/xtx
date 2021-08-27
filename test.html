@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+<style>
+    input {
+        width: 500px;
+        height: 250px;
+        border: 1px solid #999;
+    }
+    
+    button {
+        margin-top: 230px;
+    }
+    
+    .xsyyc {
+        width: 500px;
+        height: 100px;
+        margin-left: 100px;
+    }
+    
+    .bigul .tt {
+        float: left;
+        margin-left: 20px;
+    }
+    
+    .tt ul {
+        display: none;
+    }
+    
+    .father {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+    }
+    
+    .son {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+
+    <input type="textarea" id="ipt">
+    <button class="btn">发布</button>
+    <!-- <a href="#">asdsadasdadsadasdasdas</a> -->
+    <ul>
+    </ul>
+    <div class="xsyyc">
+        <ul class="bigul">
+            <li class="tt">
+                <a href="#">微博</a>
+                <ul>
+                    <li>asd</li>
+                    <li>asd</li>
+                    <li>asd</li>
+                </ul>
+            </li>
+            <li class="tt">
+                <a href="#">微博</a>
+                <ul>
+                    <li>asd</li>
+                    <li>asd</li>
+                    <li>asd</li>
+                </ul>
+            </li>
+            <li class="tt">
+                <a href="#">微博</a>
+                <ul>
+                    <li>asd</li>
+                    <li>asd</li>
+                    <li>asd</li>
+                </ul>
+            </li>
+            <li class="tt">
+                <a href="#">微博</a>
+                <ul>
+                    <li>asd</li>
+                    <li>asd</li>
+                    <li>asd</li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <div class="dx">
+        <input type="text" value="请发送短信" class="inp">
+        <button class="sub">发送</button>
+    </div>
+
+
+
+</body>
+<script>
+    var input = document.getElementById('ipt');
+    var btn = input.nextElementSibling;
+    var ul = document.body.children[2];
+    btn.onclick = function() {
+        var li = document.createElement('li');
+        li.innerHTML = input.value + "<a href='javascript:;'>删除</a>";
+        if (ul.children.length == 0) {
+            ul.appendChild(li);
+        } else {
+            ul.insertBefore(li, ul.children[0]);
+        }
+        li.children[0].onclick = function() {
+            ul.removeChild(this.parentNode);
+        }
+    }
+    var bigul = document.querySelector('.bigul');
+    var lis = bigul.children;
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onmouseover = function() {
+            this.firstElementChild.style.fontWeight = '800';
+            this.firstElementChild.style.backgroundColor = 'red';
+            this.lastElementChild.style.display = 'block';
+        }
+        lis[i].onmouseout = function() {
+            this.firstElementChild.style.fontWeight = '400';
+            this.firstElementChild.style.backgroundColor = '';
+            this.lastElementChild.style.display = 'none';
+        }
+    }
+    var father = document.querySelector(".father");
+    var son = document.querySelector(".son");
+    father.addEventListener('click', function() {
+        alert('father')
+    }, false);
+    son.addEventListener('click', function() {
+        alert('son')
+    }, false);
+    // document.addEventListener('click', function() {
+    //     alert('document')
+    // }, false);
+    var dx = document.querySelector('.dx');
+    console.log(dx.children[1]);
+    dx.children[1].addEventListener('click', function(e) {
+        let count = 5;
+        e.stopPropagation();
+        var timer60 = setInterval(function() {
+            count--;
+            console.log(count);
+            if (count == 0) {
+                dx.children[1].disabled = false;
+                dx.children[0].value = "请发送短信";
+                clearInterval(timer60);
+            } else {
+                dx.children[1].style.backgroundColor = 'red'
+                dx.children[1].disabled = true
+                dx.children[0].value = "距离下一次发送还剩" + count + "秒"
+            }
+
+        }, 1000);
+
+
+    })
+</script>
+
+</html>
